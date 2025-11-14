@@ -1,0 +1,13 @@
+{
+  "name": "bank-tests",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest --runInBand"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
