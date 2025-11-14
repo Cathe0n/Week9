@@ -21,8 +21,8 @@ describe('Bank Transaction Processor', () => {
   });
 
   //fail it
-  test('INTENTIONAL FAIL: deposit 50 should equal 0 (force failure)', () => {
+ // test('INTENTIONAL FAIL: deposit 50 should equal 0 (force failure)', () => {
     // This is wrong on purpose to trigger CI failure
-    expect(deposit(0, 50)).toBe(0);
-  });
+   // expect(deposit(0, 50)).toBe(0);
+//  });
 });
