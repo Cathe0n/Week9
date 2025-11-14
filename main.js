@@ -1,25 +1,31 @@
-function deposit(balance, amount) { //deposite func
+function deposit(balance, amount) {
     console.log(`Depositing ${amount} to balance ${balance}`);
- if (typeof amount !== 'number' || amount <= 0) {
-throw new Error("Invalid deposit amount"); //error func show thingy
+
+    
+    if (typeof balance !== 'number' || typeof amount !== 'number') {
+        throw new Error("Invalid input");
+    }
+    if (amount <= 0) {
+        throw new Error("Invalid input");
     }
 
-    const newBalance = balance + amount; //update new balance
-    console.log(`New balance after deposit: ${newBalance}`);
-    return newBalance;
+    return balance + amount;
 }
 
-function withdraw(balance, amount) { //withdraw function
+function withdraw(balance, amount) {
     console.log(`Withdrawing ${amount} from balance ${balance}`);
-    if (typeof amount !== 'number' || amount <= 0) {
-        throw new Error("Invalid withdraw amount"); //eror show
+
+    if (typeof balance !== 'number' || typeof amount !== 'number') {
+        throw new Error("Invalid input");
     }
-    if (amount > balance){
-        throw new Error("Insufficient funds"); //show not enough fund thingy
+    if (amount <= 0) {
+        throw new Error("Invalid input");
     }
-    const newBalance = balance - amount;
-    console.log(`New balance after withdraw: ${newBalance}`);
-    return newBalance;
+    if (amount > balance) {
+        throw new Error("Insufficient funds");
+    }
+
+    return balance - amount;
 }
 
-module.exports = {deposit, withdraw};
+module.exports = { deposit, withdraw };
